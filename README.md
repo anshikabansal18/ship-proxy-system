@@ -23,13 +23,13 @@ The system reduces satellite internet costs by using a **single persistent TCP c
 ## 📂 Project Structure
 ```
 ship-proxy-system/
-├── client/ # Client-side code
-│ ├── client.py # Main client script
-│ └── Dockerfile # Docker configuration for client
-├── server/ # Server-side code
-│ ├── server.py # Main server script
-│ └── Dockerfile # Docker configuration for server
-└── README.md # Project documentation
+├── client/ 
+│ ├── client.py       
+│ └── Dockerfile 
+├── server/ 
+│ ├── server.py 
+│ └── Dockerfile 
+└── README.md 
 ```
 
 ---
