@@ -45,22 +45,23 @@ docker build -t ship-proxy-server ./server
 
 # Build ship proxy client image
 docker build -t ship-proxy-client ./client
-
+```
 ### 2. Run Containers
 
 Start the offshore server:
-
+```bash
 docker run -d --name proxy-server -p 9999:9999 ship-proxy-server
-
+```
 
 Start the ship proxy client:
-
+```bash
 docker run -d --name proxy-client -p 8080:8080 --link proxy-server ship-proxy-client
-
+```
 ## 🧪 Testing
-HTTP Test
+### HTTP Test
+```bash
 curl -x http://localhost:8080 http://httpforever.com/
-
+```
 
 Expected output:
 
@@ -68,18 +69,20 @@ Expected output:
 Server is up and running.
 </html>
 
-HTTPS Test
+### HTTPS Test
+```bash
 curl -x http://localhost:8080 https://example.com/
-
+```
 
 Expected output: full HTML page of Example Domain.
 
-Sequential Requests
+### Sequential Requests
+```bash
 curl -x http://localhost:8080 http://httpforever.com/ &
 curl -x http://localhost:8080 http://httpforever.com/ &
 curl -x http://localhost:8080 http://httpforever.com/ &
 wait
-
+```
 
 All requests succeed and are processed one after another.
 
