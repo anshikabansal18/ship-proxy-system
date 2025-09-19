@@ -1,7 +1,6 @@
 # 🚢 Ship Proxy System
 
 ## 📖 Overview
-This project implements the **Ship Proxy System** as described in *The ship.pdf*.  
 The system reduces satellite internet costs by using a **single persistent TCP connection** between the ship (client proxy) and an offshore proxy (server).
 
 - All HTTP/HTTPS requests from clients onboard the ship go through the **ship proxy**.  
