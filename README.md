@@ -46,7 +46,7 @@ docker build -t ship-proxy-server ./server
 # Build ship proxy client image
 docker build -t ship-proxy-client ./client
 
-2. Run Containers
+### 2. Run Containers
 
 Start the offshore server:
 
@@ -57,7 +57,7 @@ Start the ship proxy client:
 
 docker run -d --name proxy-client -p 8080:8080 --link proxy-server ship-proxy-client
 
-🧪 Testing
+## 🧪 Testing
 HTTP Test
 curl -x http://localhost:8080 http://httpforever.com/
 
@@ -83,7 +83,7 @@ wait
 
 All requests succeed and are processed one after another.
 
-⚙️ Configuration
+## ⚙️ Configuration
 
 Client listen port: 8080 (exposed in Docker).
 
